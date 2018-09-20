@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+
+   - name: Update apt
+     apt:
+      update_cache="yes"
+
+   - name: Deploy template
+     template: src=somefile.j2  dest=folder1/somefile.j2

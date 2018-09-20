@@ -1,0 +1,30 @@
+---
+- hosts: all
+  tasks:
+
+  - name: Update apt
+    apt:
+     update_cache="yes"
+
+  - name: Install nginx
+    apt:
+      name: nginx
+
+
+  - name: Start service nginx
+    service:
+      name: nginx
+      state: started
+
+- hosts: all
+  tasks:
+
+  - name: Install postgresql
+    apt:
+      name: postgresql
+
+
+  - name: Start service postgresql
+    service:
+      name: postgresql
+      state: started

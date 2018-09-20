@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+
+   - name: Update apt
+     apt:
+      update_cache="yes"
+
+   - name: Install a list of packages
+     apt:
+       name: "{{ item }}"
+     with_items:
+        - apache2
+        - sqlite3
+        - git
