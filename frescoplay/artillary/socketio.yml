@@ -1,0 +1,41 @@
+config:
+
+  target: "https://socket-io-chat.now.sh"
+
+  phases:
+
+    - duration: 10
+
+      arrivalRate: 1
+
+
+scenarios:
+
+  - name: "Our First Artillery script"
+
+    weight: 15
+
+    engine: "socketio"
+
+    flow:
+
+      - get:
+
+          url: "/"
+
+      - emit:
+
+          channel: "add user"
+
+          data: "Ranjan"
+
+      - think: 5
+
+      - emit:
+
+          channel: "new message"
+
+          data: "Hello"
+
+      - think: 60
+

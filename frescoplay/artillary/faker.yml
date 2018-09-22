@@ -1,0 +1,25 @@
+config:
+
+  target: "https://reqres.in"
+
+  phases:
+
+    - duration: 60
+
+      arrivalRate: 20
+
+scenarios:
+
+  - name: "Register a user"
+
+    flow:
+
+      - post:
+
+          url: "/api/register"
+
+          json:
+
+            email: "ranjan@play.me"
+
+            password: "FrscoPlay"

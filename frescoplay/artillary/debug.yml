@@ -1,0 +1,23 @@
+config:
+
+  target: "https://reqres.in"
+
+  environments:
+
+    debug:
+
+      phases:
+
+        - duration: 5
+
+          arrivalCount: 1
+
+scenarios:
+
+  - name: "Debug Scenario"
+
+    flow:
+
+      - get:
+
+          url: "/api/users/2"

@@ -11,11 +11,8 @@ scenarios:
 
   - flow:
     - loop:
-      - put:
+      - get:
           url: "/api/users/3"
-          json:
-             name: "sairamkrishna"
-             job: "Software Engineer"
-    
+      
       count: 10
 

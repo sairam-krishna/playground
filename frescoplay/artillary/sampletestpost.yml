@@ -4,20 +4,16 @@ config:
 
   phases:
 
-    - duration: 50
+    - duration: 60
 
-      arrivalRate: 5
+      arrivalRate: 10
 
 scenarios:
 
   - flow:
 
     - post:
-
         url: "/api/users"
-
         json:
-
           name: "Harley"
-
           job: "Software Engineer"

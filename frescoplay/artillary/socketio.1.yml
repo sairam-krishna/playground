@@ -1,0 +1,57 @@
+config:
+
+  target: "https://socketio-chat.now.sh"
+
+  phases:
+
+    - duration: 10
+
+      arrivalRate: 5
+
+  variables:
+
+    greeting: ["hello", "namaste", "Vanakkam", "Kon'nichiwa", "Bonjour", "hola"]
+
+  processor: "./functions.js"
+
+scenarios:
+
+  - name: "data driven in socketio"
+
+    weight: 10
+
+    engine: "socketio"
+
+    flow:
+
+      - get:
+
+          url: "/"
+
+      - emit:
+
+          channel: "add user"
+
+          data: "Ranjan-{{ $randomString() }}"
+
+      - emit:
+
+          channel: "new message"
+
+          data: "{{ greeting }}"
+
+      - loop:
+
+          - function: "setMessage"
+
+          - emit:
+
+              channel: "new message"
+
+              data: "{{ message }}"
+
+          - think: 10
+
+        count: 10
+
+      - think: 60

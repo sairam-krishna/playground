@@ -1,0 +1,33 @@
+config:
+
+  target: "wss://echo.websocket.org"
+
+  phases:
+
+    - duration: 6
+
+      arrivalRate: 2
+
+  variables:
+
+    text:
+
+      - "Check"
+
+      - "World"
+
+
+
+scenarios:
+
+  - name: "First websocket Script"
+
+    engine: "ws"
+
+    flow:
+
+      - send: "{{text}}"
+
+      - think: 1
+
+      - send: "{{text}}"
