@@ -1,14 +1,19 @@
 config:
+
   target: 'https://reqres.in'
+
   phases:
+
     - duration: 60
+
       arrivalRate: 10
 
 scenarios:
 
   - flow:
+
     - post:
-        url: "/api/users"
+        url: "/api/register"
         json:
-          name: "sai"
-          job: "Software Engineer"
+          email: "sai@dev.com"
+          password: "Software Engineer"
