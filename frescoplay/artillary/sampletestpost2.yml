@@ -35,7 +35,7 @@ scenarios:
 
   - flow:
 
-    - put:
+    - post:
 
         url: "/api/users/2"
 

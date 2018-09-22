@@ -1,0 +1,28 @@
+config:
+
+  target: 'https://reqres.in'
+
+  phases:
+    - duration: 120
+      arrivalRate: 20
+      name: "Warm up the application"
+
+    - pause: 10
+
+    - duration: 60
+      arrivalRate: 10
+      rampTo: 20
+
+scenarios:
+
+  - flow:
+
+    - post:
+
+        url: "/api/users"
+
+        json:
+
+          name: "sairam"
+
+          job: "Software Engineer"
