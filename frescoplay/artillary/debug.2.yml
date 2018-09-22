@@ -18,9 +18,8 @@ scenarios:
 
     flow:
 
-      - post:
-
-          url: "/api/users"
-          json:
-           job: "{{ job }}"
-           name: "{{ name }}"
+    - post:
+        url: "/api/users"
+        json:
+          name: "sai"
+          job: "Software Engineer"

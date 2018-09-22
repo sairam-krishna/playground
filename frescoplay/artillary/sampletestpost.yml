@@ -15,5 +15,5 @@ scenarios:
     - post:
         url: "/api/users"
         json:
-          name: "Harley"
+          name: "sai"
           job: "Software Engineer"
