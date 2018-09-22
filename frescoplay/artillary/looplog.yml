@@ -1,0 +1,25 @@
+config:
+
+  target: 'https://reqres.in'
+
+  phases:
+    - duration: 60
+      arrivalRate: 20
+
+
+scenarios:
+
+  - flow:
+
+    - post:
+
+        url: "/api/users"
+
+        json:
+
+          name: "sairamkrishna"
+
+          job: "Software Engineer"
+
+
+    - log: "{{ id }}"
