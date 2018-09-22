@@ -1,0 +1,18 @@
+
+config:
+
+  target: 'https://reqres.in'
+
+  phases:
+
+    - duration: 50
+
+      arrivalRate: 15
+
+scenarios:
+
+  - flow:
+
+    - delete:
+
+        url: "/api/users/2"

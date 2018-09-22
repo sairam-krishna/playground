@@ -1,0 +1,32 @@
+config:
+
+  target: 'https://reqres.in'
+
+  phases:
+
+    - duration: 120
+
+      arrivalRate: 10
+      rampTo: 20
+
+  variables:
+
+    id:
+
+      - "1"
+
+      - "2"
+
+      - "3"
+
+      - "4"
+  scenarios:
+
+    - flow:
+
+      - put:
+
+          url: "/api/users/{{ id }}"
+          json:
+            job: "SE"
+            name: "sairam"
