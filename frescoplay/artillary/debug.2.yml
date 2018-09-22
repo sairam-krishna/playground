@@ -1,0 +1,26 @@
+config:
+
+  target: "https://reqres.in"
+
+  environments:
+
+    debug:
+
+      phases:
+
+        - duration: 60
+
+          arrivalCount: 10
+
+scenarios:
+
+  - name: "Debug Scenario"
+
+    flow:
+
+      - post:
+
+          url: "/api/users"
+          json:
+           job: "{{ job }}"
+           name: "{{ name }}"
