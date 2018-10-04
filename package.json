@@ -1,0 +1,19 @@
+{
+  "name": "znjspk1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sairam-krishna/playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sairam-krishna/playground/issues"
+  },
+  "homepage": "https://github.com/sairam-krishna/playground#readme"
+}
