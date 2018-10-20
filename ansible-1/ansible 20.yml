@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+
+  - name: transfer
+    copy:
+      src: afile.txt
+      dest: /home/ubuntu/afile_copy.txt
+    register: result
+
+  - name: print status
+    debug: var=result
